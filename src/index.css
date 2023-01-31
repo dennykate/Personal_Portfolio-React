@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.instagram {
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+}
+
+.circleAnimation {
+  animation: circleAnimate 20s linear infinite;
+}
+
+@keyframes circleAnimate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footerCircleAnimation {
+  animation: footerCircleAnimate 1.2s linear infinite;
+}
+
+@keyframes footerCircleAnimate {
+  from {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.devNameAnimation0 {
+  animation: devName 1s 0s linear;
+}
+
+.devNameAnimation1 {
+  animation: devName 1s 1s linear;
+}
+
+.devNameAnimation2 {
+  animation: devName 1s 2s linear;
+}
+
+.devNameAnimation3 {
+  animation: devName 1s 3s linear;
+}
+
+.devNameAnimation4 {
+  animation: devName 1s 0s linear;
+}
+
+.devNameAnimation5 {
+  animation: devName 1s 4s linear;
+}
+
+.devNameAnimation6 {
+  animation: devName 1s 5s linear;
+}
+
+.devNameAnimation7 {
+  animation: devName 1s 6s linear;
+}
+
+.devNameAnimation8 {
+  animation: devName 1s 7s linear;
+}
+
+@keyframes devName {
+  from {
+    transform: translateX(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

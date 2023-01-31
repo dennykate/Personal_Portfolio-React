@@ -4,7 +4,7 @@ import { HiXMark } from "react-icons/hi2";
 const Sidebar = ({ showSidebar, setShowSidebar }) => {
   return (
     <div
-      className={`w-screen h-screen z-[100] bg-primary fixed top-0 left-0 p-[10px] pt-[36px]
+      className={`w-screen h-screen z-[200] bg-primary fixed top-0 left-0 p-[10px] pt-[36px]
       ${
         showSidebar ? "translate-x-0" : "-translate-x-[100%]"
       } transition-all duration-200 ease-in-out`}

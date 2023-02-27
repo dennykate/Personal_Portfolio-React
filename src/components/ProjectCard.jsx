@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
+import Lottie from "lottie-react";
 import { AiOutlineLink, AiOutlineGithub } from "react-icons/ai";
 import { BiDetail } from "react-icons/bi";
 import { HiXMark } from "react-icons/hi2";
+import { motion } from "framer-motion";
+
+import ImageLoading from "../assets/image-loading.json";
 
 const ProjectCard = ({ data: { name, image, fullStack, demo, github } }) => {
   const [showDetail, setShowDetail] = useState(false);
+  const [imageLoadng, setImageLoading] = useState(true);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -19,12 +24,31 @@ const ProjectCard = ({ data: { name, image, fullStack, demo, github } }) => {
   };
 
   return (
-    <div className="relative">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
+      className="relative"
+    >
       <div
         className="lg:h-[180px] sm:h-[200px] h-[180px] cursor-pointer relative overflow-hidden rounded-sm group
     transition-all duration-200 ease-in-out"
       >
-        <img src={image} alt="website" className="w-full h-full object-cover" />
+        <img
+          onLoadStart={(e) => console.log(e)}
+          src={image}
+          alt="website"
+          className="w-full h-full object-cover"
+          onLoad={() => setImageLoading(false)}
+        />
+
+        {imageLoadng && (
+          <div className="w-full h-full absolute top-0 left-0 bg-gray-800 flex justify-center items-center">
+            <div className="w-[150px]">
+              <Lottie animationData={ImageLoading} className="w-full" />
+            </div>
+          </div>
+        )}
 
         <div
           className={`w-full h-full absolute top-0 left-0 z-[10] bg-whiteBlue bg-opacity-70 p-[10px]
@@ -83,7 +107,7 @@ const ProjectCard = ({ data: { name, image, fullStack, demo, github } }) => {
           Full Stack
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

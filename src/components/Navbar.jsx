@@ -15,24 +15,28 @@ const Navbar = () => {
         </div>
         <div className="items-center lg:gap-[50px] gap-[30px] md:flex hidden">
           <a
+            href="#about-me"
             className=" font-roboto tracking-[0.1px] font-[400] text-[14px] text-gray-300 cursor-pointer hover:text-secondary
          transition-all duration-200 ease-in-out"
           >
             About Me
           </a>
           <a
-            className=" font-roboto tracking-[0.1px] font-[400] text-[14px] text-gray-300 cursor-pointer hover:text-secondary
-         transition-all duration-200 ease-in-out"
-          >
-            Projects
-          </a>
-          <a
+            href="#skills"
             className=" font-roboto tracking-[0.1px] font-[400] text-[14px] text-gray-300 cursor-pointer hover:text-secondary
          transition-all duration-200 ease-in-out"
           >
             Skills
           </a>
           <a
+          href="#projects"
+            className=" font-roboto tracking-[0.1px] font-[400] text-[14px] text-gray-300 cursor-pointer hover:text-secondary
+         transition-all duration-200 ease-in-out"
+          >
+            Projects
+          </a>
+          <a
+          href="#contact-me"
             className=" font-roboto tracking-[0.1px] font-[400] text-[14px] text-gray-300 cursor-pointer hover:text-secondary
          transition-all duration-200 ease-in-out"
           >

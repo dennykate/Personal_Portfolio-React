@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import { BsGithub } from "react-icons/bs";
+import { motion } from "framer-motion";
+
 import { colorData } from "../utils/data";
 import Navbar from "./Navbar";
 import Template from "./Template";
 
+import Profile from "../assets/profile.jpg";
+
 const Hero = () => {
+  const [isLeft, setIsLeft] = useState(true);
+
   return (
-    <div className="bg-primary">
+    <div id="about-me" className="bg-primary">
       <Template>
         <Navbar />
-        <div
+        <motion.div
+          initial={{ opacity: 0, translateY: 100, scale: 0 }}
+          whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
+          transition={{ duration: 0.4, type: "spring", stiffness: 80 }}
           className="w-full min-h-screen flex md:flex-row flex-col-reverse pt-[100px] md:pt-0 md:pb-0 pb-[50px] sm:px-[30px]
         px-0"
         >
@@ -49,16 +59,53 @@ const Hero = () => {
                 portfolio, you will find a showcase of my past projects and my
                 technical skills. Thank you for visiting
               </h1>
-              <button
-                className="sm:w-[200px] w-full py-[8px] bg-secondary text-primary font-semibold flex justify-center items-center
-        rounded-sm text-[16px] mt-[20px] md:hidden "
+              <a
+                href="https://github.com/dennykate"
+                target="_blank"
+                className="mt-[18px] items-center gap-[5px] group cursor-pointer md:flex hidden"
               >
-                Download CV
-              </button>
+                <BsGithub size={16} className="text-gray-300" />
+                <h1
+                  className="font-raleway text-[12px] text-gray-300 font-bold group-hover:underline
+                  group-hover:text-gray-400 transition-all duration-200 ease-in-out"
+                >
+                  Follow me on github for more details
+                </h1>
+              </a>
+              <div className="md:hidden sm:flex grid xs:grid-cols-2 grid-cols-1 items-center gap-[10px] mt-[20px]">
+                <button
+                  className="sm:w-[200px] w-full py-[8px] bg-secondary text-primary font-semibold flex justify-center items-center
+        rounded-sm text-[16px]  "
+                >
+                  Download CV
+                </button>
+                <button
+                  className="sm:w-[200px] w-full py-[8px] bg-secondary text-primary font-semibold flex justify-center items-center
+        rounded-sm text-[16px]  gap-[5px]"
+                >
+                  <BsGithub size={20} color="black" />
+                  <h1>Github</h1>
+                </button>
+              </div>
             </div>
           </div>
-          <div className="md:w-1/2 w-full"></div>
-        </div>
+
+          <div className="md:w-1/2 w-full flex justify-center items-center">
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, type: "spring", stiffness: 80 }}
+              className="sm:w-[280px] w-[200px] p-[10px] relative"
+            >
+              <div className="w-full rounded-lg overflow-hidden rotate-[-8deg]">
+                <img src={Profile} alt="profile" className="w-full" />
+              </div>
+              <div className="w-full absolute top-0 rounded-lg overflow-hidden rotate-[4deg]">
+                <img src={Profile} alt="profile" className="w-full" />
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </Template>
     </div>
   );

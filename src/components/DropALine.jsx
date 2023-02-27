@@ -1,9 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 import Input from "./Input";
 
 const DropALine = () => {
   return (
-    <div className="md:w-[60%] w-full">
+    <motion.div
+      initial={{ translateX: 100, opacity: 0 }}
+      whileInView={{ translateX: 0, opacity: 1 }}
+      transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+      className="md:w-[60%] w-full"
+    >
       <h1 className=" font-roboto font-bold text-[30px] text-white tracking-[0.1px]">
         Drop A Line
       </h1>
@@ -30,7 +37,7 @@ const DropALine = () => {
           Submit
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

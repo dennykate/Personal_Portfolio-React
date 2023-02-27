@@ -27,6 +27,8 @@ const Footer = () => {
             </a>
             <div className="flex mt-[20px] gap-[16px] items-center">
               <a
+                href="https://web.facebook.com/aung.myochit.98499"
+                target="_blank"
                 className="w-[30px] h-[30px] flex justify-center items-center rounded-full bg-[#3b5998] hover:bg-[#3b5898ab]
              transition-all duration-200 ease-in-out cursor-pointer"
               >
@@ -39,6 +41,8 @@ const Footer = () => {
                 <FaTwitter className="text-white" size={16} />
               </a>
               <a
+                href="https://web.facebook.com/aung.myochit.98499"
+                target="_blank"
                 className="w-[30px] h-[30px] flex justify-center items-center rounded-full instagram
              transition-all duration-200 ease-in-out cursor-pointer"
               >

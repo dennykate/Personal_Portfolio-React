@@ -1,5 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
+import { motion } from "framer-motion";
 
 import Template from "./Template";
 import CircleDecoration from "../assets/circle-decoration.png";
@@ -13,7 +14,11 @@ const BackendDev = () => {
       <Template height="min-h-[120px]">
         <div className="py-[60px] pb-[100px] sm:px-[30px] px-0">
           <div className="w-full flex justify-between items-start md:flex-row flex-col-reverse md:gap-0 gap-[20px]">
-            <div>
+            <motion.div
+              initial={{ translateX: -100, opacity: 0 }}
+              whileInView={{ translateX: 0, opacity: 1 }}
+              transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+            >
               <h1 className=" font-roboto font-bold sm:text-[30px] text-[24px] text-white tracking-[0.1px]">
                 Backend Services
               </h1>
@@ -21,10 +26,15 @@ const BackendDev = () => {
                 I also developed backend api using Node.js, Express and MongoDB
                 for api services .
               </h1>
-            </div>
-            <div className="min-w-[260px]">
+            </motion.div>
+            <motion.div
+              initial={{ translateX: 100 }}
+              whileInView={{ translateX: 0 }}
+              transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+              className="min-w-[260px]"
+            >
               <Lottie animationData={DatabaseAnimation} className="w-[260px]" />
-            </div>
+            </motion.div>
           </div>
 
           <div className="w-full grid lg:grid-cols-3 sm:grid-cols-2 gap-[20px]  mt-[20px] ">

@@ -12,6 +12,9 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
       },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   plugins: [],

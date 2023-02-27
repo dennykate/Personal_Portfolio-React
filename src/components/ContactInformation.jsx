@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactInformation = ({ Icon, href, data, title }) => {
+const ContactInformation = ({ Icon, href, data, title, target }) => {
   return (
     <div className="flex flex-col gap-[16px] items-start mt-[30px] flex-wrap">
       <div className="flex gap-[10px] items-center ">
@@ -13,6 +13,7 @@ const ContactInformation = ({ Icon, href, data, title }) => {
           </h1>
           <a
             href={href}
+            target={target && "_blank"}
             className="font-raleway text-white text-[15px] font-[500] hover:underline"
           >
             {data}

@@ -7,14 +7,14 @@ import Template from "./Template";
 
 const ContactMe = () => {
   return (
-    <div className=" bg-primary relative">
+    <div id="contact-me" className=" bg-primary relative">
       <Template height="py-[100px]">
         <div className="flex items-start md:gap-[30px] gap-[40px] sm:px-[30px] px-0 md:flex-row flex-col">
           <ContactUs />
           <DropALine />
         </div>
       </Template>
-      <div className="absolute top-0 -right-[10px] -translate-y-[53px] z-[100]">
+      <div className="absolute top-0 -right-[10px] sm:-translate-y-[53px] -translate-y-[26px] z-[100]">
         <DotsDecoration />
       </div>
       <div className="absolute bottom-5 left-0 -translate-x-[14px] z-[100]">

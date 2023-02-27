@@ -11,24 +11,28 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
     >
       <div className="flex flex-col gap-[20px] max-w-[300px]">
         <a
+          href="#about-me"
           className=" font-raleway tracking-[0.1px] font-[400] text-[20px] text-gray-300 cursor-pointer 
           hover:text-secondary transition-all duration-200 ease-in-out"
         >
           About Me
         </a>
         <a
-          className=" font-raleway tracking-[0.1px] font-[400] text-[20px] text-gray-300 cursor-pointer 
-          hover:text-secondary transition-all duration-200 ease-in-out"
-        >
-          Projects
-        </a>
-        <a
+          href="#skills"
           className=" font-raleway tracking-[0.1px] font-[400] text-[20px] text-gray-300 cursor-pointer 
           hover:text-secondary transition-all duration-200 ease-in-out"
         >
           Skills
         </a>
         <a
+          href="#projects"
+          className=" font-raleway tracking-[0.1px] font-[400] text-[20px] text-gray-300 cursor-pointer 
+          hover:text-secondary transition-all duration-200 ease-in-out"
+        >
+          Projects
+        </a>
+        <a
+          href="#contact-me"
           className=" font-raleway tracking-[0.1px] font-[400] text-[20px] text-gray-300 cursor-pointer 
           hover:text-secondary transition-all duration-200 ease-in-out"
         >

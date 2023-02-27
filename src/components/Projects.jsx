@@ -18,16 +18,13 @@ const Projects = () => {
   };
 
   return (
-    <div ref={projectRef} className="bg-primary">
+    <div id="projects" ref={projectRef} className="bg-primary">
       <Template height="min-h-[100px]">
         <div className="sm:px-[30px] px-0 py-[60px]">
           <div>
             <h1 className=" font-roboto font-bold sm:text-[30px] text-[24px] text-white tracking-[0.1px]">
               Projects
             </h1>
-            {/* <h1 className="font-raleway text-[12px] text-gray-300 mt-[5px]">
-              I have many projects like...
-            </h1> */}
           </div>
           <div className="w-full grid lg:grid-cols-3 sm:grid-cols-2 gap-[20px]  mt-[20px] ">
             {projectsData.slice(0, limitProjects).map((data, index) => (

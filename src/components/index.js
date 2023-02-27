@@ -7,3 +7,4 @@ export { default as Projects } from "./Projects";
 export { default as BackendDev } from "./BackendDev";
 export { default as MobileDev } from "./MobileDev";
 export { default as ScrollToTop } from "./ScrollToTop";
+export { default as Loading } from "./Loading";

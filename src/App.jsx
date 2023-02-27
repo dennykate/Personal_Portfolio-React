@@ -5,6 +5,7 @@ import {
   Exprience,
   Footer,
   Hero,
+  Loading,
   MobileDev,
   Projects,
   ScrollToTop,
@@ -13,6 +14,14 @@ import {
 
 const Main = () => {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
+  const [showLoading, setShowLoading] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowLoading(false);
+    }, 5000);
+  }, []);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 768) {
@@ -24,17 +33,23 @@ const Main = () => {
   });
 
   return (
-    <div className="overflow-x-hidden">
-      <Hero />
-      <Exprience />
-      <Projects />
-      <BackendDev />
-      <MobileDev />
-      <Skills />
-      <ContactMe />
-      <Footer />
-    <ScrollToTop showScrollBtn={showScrollBtn}/>
-    </div>
+    <>
+      {showLoading ? (
+        <Loading />
+      ) : (
+        <div className="overflow-x-hidden">
+          <Hero />
+          <Exprience />
+          <Projects />
+          <BackendDev />
+          <MobileDev />
+          <Skills />
+          <ContactMe />
+          <Footer />
+          <ScrollToTop showScrollBtn={showScrollBtn} />
+        </div>
+      )}
+    </>
   );
 };
 

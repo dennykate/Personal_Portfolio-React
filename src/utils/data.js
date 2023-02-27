@@ -3,6 +3,11 @@ import { BsStars } from "react-icons/bs";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { GoDeviceMobile } from "react-icons/go";
 
+import MongoDb from "../assets/mongodb-logo.png";
+import ExpressJs from "../assets/express-logo.png";
+import ReactJs from "../assets/reactjs-logo.png";
+import Nodejs from "../assets/nodejs-logo.png";
+
 export const skillData = [
   {
     total: "30+",
@@ -149,7 +154,7 @@ export const backendApiData = [
   {
     name: "Football Leagues Standings Api",
     image:
-      "https://i.postimg.cc/3wR46btj/21-04-02-4caf51ab7399630acea42498e04ce47c-960.webp",
+      "https://i.postimg.cc/9QHFsSp0/Premier-League-winners-list-by-year-All-time-past-winners-scaled.webp",
     fullStack: false,
     demo: "https://football-api-express.vercel.app/",
     github: "https://github.com/dennykate/Football_Api-Express",
@@ -214,3 +219,5 @@ export const colorData = [
   "text-[#8E2DE2]",
   "text-[#12c2e9]",
 ];
+
+export const skillsData = [MongoDb, ExpressJs, ReactJs, Nodejs];

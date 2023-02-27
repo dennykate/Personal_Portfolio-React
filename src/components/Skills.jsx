@@ -1,12 +1,10 @@
 import React from "react";
 import Lottie from "lottie-react";
+import { motion } from "framer-motion";
 
 import Template from "./Template";
 import DeveloperAnimation from "../assets/developer-animation.json";
-import MongoDb from "../assets/mongodb-logo.png";
-import ExpressJs from "../assets/express-logo.png";
-import ReactJs from "../assets/reactjs-logo.png";
-import Nodejs from "../assets/nodejs-logo.png";
+import { skillsData } from "../utils/data";
 
 const Skills = () => {
   return (
@@ -14,18 +12,28 @@ const Skills = () => {
       <Template height="min-h-[160px] ">
         <div className="w-full h-full py-[60px] sm:px-[30px] px-0">
           <div className="flex items-center gap-[30px] md:flex-row flex-col">
-            <div className="sm:min-w-[300px] min-w-[200px]">
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+              className="sm:min-w-[300px] min-w-[200px]"
+            >
               <Lottie
                 animationData={DeveloperAnimation}
                 className="sm:w-[300px] w-[200px]"
               />
-            </div>
-            <div className="flex flex-col items-start gap-[20px]">
+            </motion.div>
+            <motion.div
+              initial={{ translateX: 100, opacity: 0 }}
+              whileInView={{ translateX: 0, opacity: 1 }}
+              transition={{ duration: 0.5, type: "spring", stiffness: 80 }}
+              className="flex flex-col items-start gap-[20px]"
+            >
               <h1 className=" font-raleway sm:text-[26px] text-[20px] text-white">
                 I'm a MERN Stack Developer
               </h1>
               <div className="flex items-center gap-[20px] flex-wrap">
-                {[MongoDb, ExpressJs, ReactJs, Nodejs].map((data, id) => (
+                {skillsData.map((data, id) => (
                   <div
                     key={id}
                     className={`sm:w-[130px] sm:h-[70px] w-[100px] h-[55px] flex justify-center items-center 
@@ -44,7 +52,7 @@ const Skills = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Template>

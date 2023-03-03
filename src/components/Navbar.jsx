@@ -9,7 +9,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-[100px] flex justify-between items-center z-[100] absolute top-0 sm:px-[30px] pr-[20px]">
+      <div
+        className="w-full h-[100px] flex justify-between items-center sm:px-[30px] px-[20px] bg-primary
+       sm:absolute static top-0 z-[100]"
+      >
         <div className="md:w-[200px] w-[160px]">
           <img src={Logo} alt="logo" className="w-full" />
         </div>
@@ -29,14 +32,14 @@ const Navbar = () => {
             Skills
           </a>
           <a
-          href="#projects"
+            href="#projects"
             className=" font-roboto tracking-[0.1px] font-[400] text-[14px] text-gray-300 cursor-pointer hover:text-secondary
          transition-all duration-200 ease-in-out"
           >
             Projects
           </a>
           <a
-          href="#contact-me"
+            href="#contact-me"
             className=" font-roboto tracking-[0.1px] font-[400] text-[14px] text-gray-300 cursor-pointer hover:text-secondary
          transition-all duration-200 ease-in-out"
           >

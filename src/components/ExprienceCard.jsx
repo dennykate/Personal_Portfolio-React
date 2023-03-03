@@ -6,6 +6,7 @@ const ExprienceCard = ({ data: { Icon, notDashed, title, total } }) => {
   return (
     <motion.div
       initial={{ translateY: 50, opacity: 0 }}
+      viewport={{ once: true }}
       whileInView={{ translateY: 0, opacity: 1 }}
       transition={{ duration: 0.3 }}
       className={`h-[160px] border-[1px]  border-secondary rounded-tr-[30px] relative px-[10px] text-center

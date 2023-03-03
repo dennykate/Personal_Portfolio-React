@@ -16,6 +16,7 @@ const BackendDev = () => {
           <div className="w-full flex justify-between items-start md:flex-row flex-col-reverse md:gap-0 gap-[20px]">
             <motion.div
               initial={{ translateX: -100, opacity: 0 }}
+              viewport={{ once: true }}
               whileInView={{ translateX: 0, opacity: 1 }}
               transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
             >
@@ -29,6 +30,7 @@ const BackendDev = () => {
             </motion.div>
             <motion.div
               initial={{ translateX: 100 }}
+              viewport={{ once: true }}
               whileInView={{ translateX: 0 }}
               transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
               className="min-w-[260px]"

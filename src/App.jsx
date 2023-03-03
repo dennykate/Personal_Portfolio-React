@@ -7,6 +7,7 @@ import {
   Hero,
   Loading,
   MobileDev,
+  Navbar,
   Projects,
   ScrollToTop,
   Skills,
@@ -14,7 +15,7 @@ import {
 
 const Main = () => {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
-  const [showLoading, setShowLoading] = useState(false);
+  const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -38,6 +39,7 @@ const Main = () => {
         <Loading />
       ) : (
         <div className="overflow-x-hidden">
+          <Navbar />
           <Hero />
           <Exprience />
           <Projects />

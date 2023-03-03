@@ -14,6 +14,7 @@ const Skills = () => {
           <div className="flex items-center gap-[30px] md:flex-row flex-col">
             <motion.div
               initial={{ scale: 0 }}
+              viewport={{ once: true }}
               whileInView={{ scale: 1 }}
               transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
               className="sm:min-w-[300px] min-w-[200px]"
@@ -23,8 +24,10 @@ const Skills = () => {
                 className="sm:w-[300px] w-[200px]"
               />
             </motion.div>
+
             <motion.div
               initial={{ translateX: 100, opacity: 0 }}
+              viewport={{ once: true }}
               whileInView={{ translateX: 0, opacity: 1 }}
               transition={{ duration: 0.5, type: "spring", stiffness: 80 }}
               className="flex flex-col items-start gap-[20px]"

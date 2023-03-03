@@ -26,6 +26,7 @@ const ProjectCard = ({ data: { name, image, fullStack, demo, github } }) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
+      viewport={{ once: true }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
       className="relative"
@@ -52,7 +53,8 @@ const ProjectCard = ({ data: { name, image, fullStack, demo, github } }) => {
 
         <div
           className={`w-full h-full absolute top-0 left-0 z-[10] bg-whiteBlue bg-opacity-70 p-[10px]
-      md:group-hover:translate-y-0 transition-all duration-200 ease-in-out ${
+      md:group-hover:translate-y-0 
+      transition-all duration-200 ease-in-out ${
         showDetail ? "translate-y-0" : "translate-y-[100%]"
       }`}
         >

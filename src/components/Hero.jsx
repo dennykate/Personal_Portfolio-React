@@ -3,26 +3,24 @@ import { BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 import { colorData } from "../utils/data";
-import Navbar from "./Navbar";
+
 import Template from "./Template";
 
 import Profile from "../assets/profile.jpg";
 
 const Hero = () => {
-  const [isLeft, setIsLeft] = useState(true);
-
   return (
     <div id="about-me" className="bg-primary">
       <Template>
-        <Navbar />
         <motion.div
-          initial={{ opacity: 0, translateY: 100, scale: 0 }}
-          whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
-          transition={{ duration: 0.4, type: "spring", stiffness: 80 }}
-          className="w-full min-h-screen flex md:flex-row flex-col-reverse pt-[100px] md:pt-0 md:pb-0 pb-[50px] sm:px-[30px]
-        px-0"
+          initial={{ opacity: 0, translateY: 100 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.3 }}
+          className="w-full min-h-screen flex md:flex-row flex-col-reverse sm:pt-[100px] pt-[0] md:pt-0 md:pb-0 pb-[50px] 
+          sm:px-[30px] px-0"
         >
-          <div className="md:w-1/2 w-full flex items-center ">
+          <div className="md:w-1/2 w-full flex items-center sm:mt-[80px] mt-[20px]">
             <div className="md:w-[500px] w-full sm:px-[10px] px-0">
               <div className=" bg-[#632020] w-[140px] h-[40px] flex justify-center items-center rounded-sm">
                 <h1 className="sm:text-[14px] text-[12px] text-gray-300 font-raleway">
@@ -90,12 +88,13 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="md:w-1/2 w-full flex justify-center items-center">
+          <div className="md:w-1/2 w-full flex justify-center items-center sm:mt-[80px] mt-0 ">
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
+              viewport={{ once: true }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, type: "spring", stiffness: 80 }}
-              className="sm:w-[280px] w-[200px] p-[10px] relative"
+              transition={{ duration: 0.3 }}
+              className="sm:w-[280px] w-[200px] p-[10px] relative z-[100]"
             >
               <div className="w-full rounded-lg overflow-hidden rotate-[-8deg]">
                 <img src={Profile} alt="profile" className="w-full" />

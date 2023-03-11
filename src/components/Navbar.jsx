@@ -8,10 +8,10 @@ const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <>
+    <div className="w-full sm:absolute static top-0 z-[100]">
       <div
-        className="w-full h-[100px] flex justify-between items-center sm:px-[30px] px-[20px] bg-primary
-       sm:absolute static top-0 z-[100]"
+        className="max-w-[1024px] mx-auto h-[100px] flex justify-between items-center sm:px-[30px] px-[20px] bg-primary
+       "
       >
         <div className="md:w-[200px] w-[160px]">
           <img src={Logo} alt="logo" className="w-full" />
@@ -63,7 +63,7 @@ const Navbar = () => {
       </div>
 
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
-    </>
+    </div>
   );
 };
 

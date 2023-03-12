@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="w-full sm:absolute static top-0 z-[100]">
       <div
-        className="max-w-[1024px] mx-auto h-[100px] flex justify-between items-center sm:px-[30px] px-[20px] bg-primary
+        className="max-w-[1024px] mx-auto h-[100px] flex justify-between items-center sm:px-[30px] px-[20px] bg-transparent
        "
       >
         <div className="md:w-[200px] w-[160px]">

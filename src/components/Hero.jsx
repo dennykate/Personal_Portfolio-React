@@ -11,6 +11,7 @@ import Profile from "../assets/profile.jpg";
 const Hero = () => {
   return (
     <div id="about-me" className="bg-primary">
+      <div className="absolute top-0 right-0 w-[200px] h-[200px] bgDecoration"></div>
       <Template>
         <motion.div
           initial={{ opacity: 0, translateY: 100 }}

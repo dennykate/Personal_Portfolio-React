@@ -15,7 +15,7 @@ import {
 
 const Main = () => {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
-  const [showLoading, setShowLoading] = useState(false);
+  const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {

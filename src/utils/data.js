@@ -72,6 +72,13 @@ export const projectsData = [
     demo: "https://monst-online-service.vercel.app/",
   },
   {
+    name: "Catelog - SEO Agency",
+    image: "https://i.postimg.cc/dQdtcGcn/29-03-2023-01-04-09-REC.png",
+    fullStack: false,
+    demo: "https://catelog-seo-agency-react.vercel.app/",
+    github: "https://github.com/dennykate/Catelog_SEO_Agency-React",
+  },
+  {
     name: "E Learning",
     image: "https://i.postimg.cc/MGbsYtRb/e-learning.png",
     fullStack: false,

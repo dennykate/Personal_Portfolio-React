@@ -13,7 +13,7 @@ const Navbar = () => {
         className="max-w-[1024px] mx-auto h-[100px] flex justify-between items-center sm:px-[30px] px-[20px] bg-transparent
        "
       >
-        <div className="md:w-[200px] w-[160px] bg-transparent">
+        <div className="md:w-[140px] w-[100px] bg-transparent">
           <img src={Logo} alt="logo" className="w-full" />
         </div>
         <div className="items-center lg:gap-[50px] gap-[30px] md:flex hidden">

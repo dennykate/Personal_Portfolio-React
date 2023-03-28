@@ -8,12 +8,12 @@ const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <div className="w-full sm:absolute static top-0 z-[100]">
+    <div className="w-full absolute top-0 z-[100]">
       <div
         className="max-w-[1024px] mx-auto h-[100px] flex justify-between items-center sm:px-[30px] px-[20px] bg-transparent
        "
       >
-        <div className="md:w-[200px] w-[160px]">
+        <div className="md:w-[200px] w-[160px] bg-transparent">
           <img src={Logo} alt="logo" className="w-full" />
         </div>
         <div className="items-center lg:gap-[50px] gap-[30px] md:flex hidden">
@@ -46,9 +46,9 @@ const Navbar = () => {
             Contact Me
           </a>
           <button
-            className="px-[16px] py-[8px] rounded-sm bg-[#c5274c] text-primary font-roboto text-[14px]
-        hover:bg-transparent border-[1px] border-[#c5274c] transition-all duration-200 ease-in-out md:block hidden
-        hover:text-secondary"
+            className="px-[16px] py-[8px] rounded-sm bg-secondary text-primary font-roboto text-[14px]
+        hover:bg-transparent border-[1px] border-secondary transition-all duration-200 ease-in-out md:block hidden
+        hover:text-white"
           >
             Download CV
           </button>

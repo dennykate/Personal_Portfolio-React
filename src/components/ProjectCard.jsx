@@ -39,7 +39,7 @@ const ProjectCard = ({ data: { name, image, fullStack, demo, github } }) => {
           onLoadStart={(e) => console.log(e)}
           src={image}
           alt="website"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover group-hover:scale-110 transition-all duration-200 ease-in-out"
           onLoad={() => setImageLoading(false)}
         />
 
@@ -89,9 +89,9 @@ const ProjectCard = ({ data: { name, image, fullStack, demo, github } }) => {
         <button
           onClick={() => setShowDetail(!showDetail)}
           className={`absolute bottom-[5px] right-[5px] w-[40px] h-[40px] rounded-full md:hidden 
-      flex justify-center items-center z-[10] ${
-        showDetail ? "bg-black" : "bg-secondary"
-      }`}
+          flex justify-center items-center z-[10] ${
+            showDetail ? "bg-black" : "bg-secondary"
+          }`}
         >
           {showDetail ? (
             <HiXMark size={18} color="white" />
@@ -103,7 +103,7 @@ const ProjectCard = ({ data: { name, image, fullStack, demo, github } }) => {
 
       {fullStack && (
         <div
-          className="px-[5px] py-[3px] bg-secondary flex justify-center items-center text-primary rounded-sm
+          className="px-[5px] py-[3px] bg-secondary flex justify-center items-center text-white rounded-sm
       font-raleway absolute top-[5px] -left-[10px] text-[12px] font-semibold z-10 shadow-lg"
         >
           Full Stack

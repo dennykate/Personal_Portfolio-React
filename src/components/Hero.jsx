@@ -10,7 +10,7 @@ import Profile from "../assets/profile.jpg";
 
 const Hero = () => {
   return (
-    <div id="about-me" className="bg-primary">
+    <div id="about-me" className="bg-primary sm:pt-0 pt-[100px]">
       <div className="absolute top-0 right-0 w-[200px] h-[200px] bgDecoration"></div>
       <Template>
         <motion.div
@@ -95,7 +95,7 @@ const Hero = () => {
               viewport={{ once: true }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className="sm:w-[280px] w-[200px] p-[10px] relative z-[100]"
+              className="sm:w-[280px] w-[200px] p-[10px] relative"
             >
               <div className="w-full rounded-lg overflow-hidden rotate-[-8deg]">
                 <img src={Profile} alt="profile" className="w-full" />

@@ -34,7 +34,7 @@ const Projects = () => {
           <div className="w-full mt-[40px] flex justify-center items-center">
             <button
               onClick={handleSeemore}
-              className="px-[14px] py-[5px] bg-secondary text-primary rounded-sm font-raleway font-semibold text-sm
+              className="px-[14px] py-[5px] bg-secondary text-white rounded-sm font-raleway font-semibold text-sm
             border-[1px] border-secondary md:hover:bg-transparent transition-all duration-200 ease-in-out md:hover:text-secondary"
             >
               {limitProjects < 16 ? "Show More" : "Show Less"}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
 
@@ -78,32 +79,23 @@ const Hero = () => {
                 >
                   Download CV
                 </button>
-                <button
+                <a
+                  href="https://github.com/dennykate?tab=repositories"
+                  target="_blank"
                   className="sm:w-[200px] w-full py-[8px] bg-secondary text-primary font-semibold flex justify-center items-center
         rounded-sm text-[16px]  gap-[5px]"
                 >
                   <BsGithub size={20} color="black" />
                   <h1>Github</h1>
-                </button>
+                </a>
               </div>
             </div>
           </div>
 
           <div className="md:w-1/2 w-full flex justify-center items-center sm:mt-[80px] mt-0 ">
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              viewport={{ once: true }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              className="sm:w-[280px] w-[200px] p-[10px] relative"
-            >
-              <div className="w-full rounded-lg overflow-hidden rotate-[-8deg]">
-                <img src={Profile} alt="profile" className="w-full" />
-              </div>
-              <div className="w-full absolute top-0 rounded-lg overflow-hidden rotate-[4deg]">
-                <img src={Profile} alt="profile" className="w-full" />
-              </div>
-            </motion.div>
+            <div className="sm:w-[280px] w-[200px] rounded-lg overflow-hidden">
+              <img src={Profile} alt="profile" className="w-full" />
+            </div>
           </div>
         </motion.div>
       </Template>

@@ -45,13 +45,13 @@ const Navbar = () => {
           >
             Contact Me
           </a>
-          <button
+          {/* <button
             className="px-[16px] py-[8px] rounded-sm bg-secondary text-primary font-roboto text-[14px]
         hover:bg-transparent border-[1px] border-secondary transition-all duration-200 ease-in-out md:block hidden
         hover:text-white"
           >
             Download CV
-          </button>
+          </button> */}
         </div>
 
         <button

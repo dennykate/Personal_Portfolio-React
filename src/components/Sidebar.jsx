@@ -39,12 +39,12 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
           Contact Me
         </a>
       </div>
-      <button
+      {/* <button
         className="w-full py-[8px] bg-secondary text-primary font-semibold flex justify-center items-center
         rounded-sm text-[20px] mt-[40px]"
       >
         Download CV
-      </button>
+      </button> */}
 
       <button
         onClick={() => setShowSidebar(false)}

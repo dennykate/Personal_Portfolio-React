@@ -72,13 +72,13 @@ const Hero = () => {
                   Follow me on github for more details
                 </h1>
               </a>
-              <div className="md:hidden sm:flex grid xs:grid-cols-2 grid-cols-1 items-center gap-[10px] mt-[20px]">
-                <button
+              <div className="md:hidden sm:flex grid xs:grid-cols-1 grid-cols-1 items-center gap-[10px] mt-[20px]">
+                {/* <button
                   className="sm:w-[200px] w-full py-[8px] bg-secondary text-primary font-semibold flex justify-center items-center
         rounded-sm text-[16px]  "
                 >
                   Download CV
-                </button>
+                </button> */}
                 <a
                   href="https://github.com/dennykate?tab=repositories"
                   target="_blank"
@@ -92,7 +92,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="md:w-1/2 w-full flex justify-center items-center sm:mt-[80px] mt-0 ">
+          <div className="md:w-1/2 w-full flex md:justify-end justify-center items-center sm:mt-[80px] mt-0 ">
             <div className="sm:w-[280px] w-[200px] rounded-lg overflow-hidden">
               <img src={Profile} alt="profile" className="w-full" />
             </div>

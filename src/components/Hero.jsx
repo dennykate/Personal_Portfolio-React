@@ -20,7 +20,7 @@ const Hero = () => {
           whileInView={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 0.3 }}
           className="w-full min-h-screen flex md:flex-row flex-col-reverse sm:pt-[100px] pt-[0] md:pt-0 md:pb-0 pb-[50px] 
-          sm:px-[30px] px-0"
+          sm:px-[30px] px-0 sm:gap-0 gap-5"
         >
           <div className="md:w-1/2 w-full flex items-center sm:mt-[80px] mt-[20px]">
             <div className="md:w-[500px] w-full sm:px-[10px] px-0">
@@ -46,10 +46,10 @@ const Hero = () => {
                   );
                 })}
               </h1>
-              <h1 className="font-raleway text-gray-300 text-[10px] ">
+              <h1 className="font-raleway text-gray-300 text-[10px] font-semibold">
                 I'm a mern stack developer
               </h1>
-              <h1 className="font-raleway text-[12px] text-gray-300 mt-[20px] leading-[25px] ">
+              <h1 className="font-raleway text-[12px] text-gray-300 mt-[20px] sm:leading-[25px] leading-[20px] ">
                 Welcome to my personal portfolio!. I am a skilled MERN full
                 stack developer. I have experience in building and deploying web
                 applications using the MongoDB, Express.js, React, and Node.js
@@ -93,8 +93,13 @@ const Hero = () => {
           </div>
 
           <div className="md:w-1/2 w-full flex md:justify-end justify-center items-center sm:mt-[80px] mt-0 ">
-            <div className="sm:w-[280px] w-[200px] rounded-lg overflow-hidden">
-              <img src={Profile} alt="profile" className="w-full" />
+            <div className="sm:w-[280px] w-[200px] rounded-lg  relative">
+              <img src={Profile} alt="profile" className="w-full rounded-md" />
+              <img
+                src={Profile}
+                alt="profile"
+                className="w-full rounded-md absolute top-3 right-3 shadow-xl"
+              />
             </div>
           </div>
         </motion.div>

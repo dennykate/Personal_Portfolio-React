@@ -35,6 +35,7 @@ const Footer = () => {
                 <FaFacebookF className="text-white" size={16} />
               </a>
               <a
+                href="https://web.facebook.com/aung.myochit.98499"
                 className="w-[30px] h-[30px] flex justify-center items-center rounded-full bg-[#00acee] hover:bg-[#00abeea8]
              transition-all duration-200 ease-in-out cursor-pointer"
               >

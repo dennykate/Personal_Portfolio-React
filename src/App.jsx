@@ -11,6 +11,7 @@ import {
   Projects,
   ScrollToTop,
   Skills,
+  TeamProjects,
 } from "./components";
 
 const Main = () => {
@@ -42,6 +43,7 @@ const Main = () => {
           <Navbar />
           <Hero />
           <Exprience />
+          <TeamProjects />
           <Projects />
           <BackendDev />
           <MobileDev />

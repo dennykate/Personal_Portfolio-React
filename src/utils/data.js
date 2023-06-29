@@ -35,6 +35,23 @@ export const skillData = [
   },
 ];
 
+export const TeamProjectsData = [
+  {
+    name: "Nexus - Contacts",
+    image: "https://i.postimg.cc/0yhyJX0f/29-06-2023-19-01-20-REC.png",
+    fullStack: false,
+    demo: "https://nexus-contacts.vercel.app/",
+    github: "https://github.com/EiThwe/nexus",
+  },
+  {
+    name: "The Cappa - Lexury Hotel",
+    image: "https://i.postimg.cc/YCxwtXy0/29-06-2023-19-03-27-REC.png",
+    fullStack: false,
+    demo: "https://the-cappa-luxury-hotel-green.vercel.app/",
+    github: "https://github.com/EiThwe/cappa",
+  },
+];
+
 export const projectsData = [
   {
     name: "Modern UI Challenge",

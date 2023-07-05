@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 import Input from "./Input";
-import { useState } from "react";
-import Alert from "./Alert";
 
 const REACT_APP_API = "https://personal-portfolio-api-eight.vercel.app/comment";
 
@@ -14,14 +13,11 @@ const DropALine = () => {
   const [phone, setPhone] = useState("");
   const [budget, setBudget] = useState("");
   const [message, setMessage] = useState("");
-  const [showAlert, setShowAlert] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [alertMessage, setAlertMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
   const clickHandler = async () => {
     if (!name || !email || !phone || !budget || !message) {
-      showAlertFunc("Require all data");
+      toast.error("Require all data");
       return;
     }
 
@@ -40,24 +36,8 @@ const DropALine = () => {
       })
       .then((mes) => {
         defaultForm();
-        showAlertFunc(mes.message);
+        toast.success("Thanks for your message");
       });
-  };
-
-  const showAlertFunc = (message) => {
-    if (message == "action success") {
-      setIsSuccess(true);
-      setAlertMessage("Thanks for your message");
-    } else {
-      setAlertMessage(message);
-      setIsSuccess(false);
-    }
-
-    setShowAlert(true);
-
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 5000);
   };
 
   const defaultForm = () => {
@@ -72,11 +52,12 @@ const DropALine = () => {
   return (
     <motion.div
       initial={{ translateX: 100, opacity: 0 }}
-      viewport={{once: true}}
-          whileInView={{ translateX: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      whileInView={{ translateX: 0, opacity: 1 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
       className="md:w-[60%] w-full"
     >
+      <Toaster position="bottom-center" />
       <h1 className=" font-roboto font-bold text-[30px] text-white tracking-[0.1px]">
         Drop A Line
       </h1>
@@ -114,8 +95,6 @@ const DropALine = () => {
           )}
         </button>
       </div>
-
-      {showAlert && <Alert isSuccess={isSuccess} alertMessage={alertMessage} />}
     </motion.div>
   );
 };

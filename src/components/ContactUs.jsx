@@ -10,8 +10,8 @@ const ContactUs = () => {
   return (
     <motion.div
       initial={{ translateX: -100, opacity: 0 }}
-      viewport={{once: true}}
-          whileInView={{ translateX: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      whileInView={{ translateX: 0, opacity: 1 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
       className="md:w-[40%] w-full"
     >
@@ -31,8 +31,8 @@ const ContactUs = () => {
         />
         <ContactInformation
           Icon={AiOutlineMail}
-          href="mailto:dennykate22@gmail.com"
-          data="dennykate22@gmail.com"
+          href="mailto:aungmyochit22122002@gmail.com"
+          data="aungmyochit22122002@gmail.com"
           title="Email"
         />
         <ContactInformation

@@ -19,7 +19,7 @@ const Hero = () => {
           viewport={{ once: true }}
           whileInView={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 0.3 }}
-          className="w-full min-h-screen flex md:flex-row flex-col-reverse sm:pt-[100px] pt-[0] md:pt-0 md:pb-0 pb-[50px] 
+          className="w-full sm:min-h-screen flex md:flex-row flex-col-reverse sm:pt-[100px] pt-[50px] md:pt-0 md:pb-0 pb-[50px] 
           sm:px-[30px] px-0 sm:gap-0 gap-5"
         >
           <div className="md:w-1/2 w-full flex items-center sm:mt-[80px] mt-[20px]">

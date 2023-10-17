@@ -22,13 +22,13 @@ export const skillData = [
     notDashed: true,
   },
   {
-    total: "4+",
+    total: "5+",
     title: "Api Services",
     Icon: AiFillDatabase,
     notDashed: false,
   },
   {
-    total: "4+",
+    total: "5+",
     title: "Mobile Apps",
     Icon: GoDeviceMobile,
     notDashed: false,

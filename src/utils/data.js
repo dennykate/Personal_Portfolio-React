@@ -61,11 +61,11 @@ export const projectsData = [
     github: "https://github.com/dennykate/Modern_UI_Challenge-React",
   },
   {
-    name: "Shop Ecommerce",
-    image: "https://i.postimg.cc/WbLk2Vxz/shop-ecommerce.png",
+    name: "Mr QR",
+    image: "https://i.postimg.cc/j5pGS8wD/10-11-2023-15-03-18-REC.png",
     fullStack: true,
-    demo: "https://shop-ecommerce-fullstack-react.vercel.app/",
-    github: "https://github.com/dennykate/Shop_Ecommerce_Fullstack-React",
+    demo: "https://beta-mr-qr.vercel.app/",
+    github: "https://github.com/dennykate/Mr_QR-React",
   },
   {
     name: "Enfti NFTs",

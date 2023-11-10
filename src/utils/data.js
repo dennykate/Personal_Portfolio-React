@@ -62,7 +62,7 @@ export const projectsData = [
   },
   {
     name: "Mr QR",
-    image: "https://i.postimg.cc/j5pGS8wD/10-11-2023-15-03-18-REC.png",
+    image: "https://i.postimg.cc/9XxXt9Rz/10-11-2023-15-22-17-REC.png",
     fullStack: true,
     demo: "https://beta-mr-qr.vercel.app/",
     github: "https://github.com/dennykate/Mr_QR-React",
